@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+html {
+  font-size: 16px;
+}
+
+* {
+ font-family: 'Varela Round', sans-serif!important;
+}
+
+h1, h2, h3, h4, h5, h6, {
+  font-weight: 900!important;
+  color: $grey!important;
+  letter-spacing: -2px;
+  text-transform: capitalize;
+  font-family: "proxima-nova",sans-serif!important;
+}
+
+p, a, sub, sup, td, input {
+  font-weight: 400!important;
+  color: #949494!important;
+  letter-spacing: 0;
+}
+
+.x-btn,
+#menu-item-32 a span,
+input[type='submit'] {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: "proxima-nova",sans-serif!important;
+
+}
+p {
+  font-size: 1rem!important;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 32px!important;
+  @include breakpoint(xlarge) {
+    font-size: 30px!important;
+  }
+}
+
+h2 {
+  font-size: 28px!important;
+
+  @include breakpoint(xlarge) {
+    font-size: 22px!important;
+  }
+}
+
+h3 {
+  font-size: 24px!important;
+
+  @include breakpoint(xlarge) {
+    font-size: 18px!important;
+  }
+}
+
+h4 {
+  font-size: 1.414rem!important;
+
+  @include breakpoint(xlarge) {
+    font-size: 1.214rem!important;
+  }
+}
+
+h5 {
+  font-size: 1.25rem!important;
+
+  @include breakpoint(xlarge) {
+    font-size: 1.1rem!important;
+  }
+}
+
+h6 {
+  font-size: 1.25rem!important;
+
+  @include breakpoint(xlarge) {
+    font-size: 1.1rem!important;
+  }
+}
+
+
+//---Icon Fix
+[data-x-icon], 
+[class*="x-icon-"] {
+  font-family: "FontAwesome"!important;
+}

@@ -1,0 +1,457 @@
+.home {
+  .home_row_1 {
+    margin-top: 110px;
+    z-index: 0;
+    margin: 0!important;
+    max-width: 100%!important;
+    width: 100%!important;
+    min-height:775px;
+    position: relative;
+    bottom: 0;
+    padding: 0;
+    background: $blue;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $blue, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $blue, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    >.x-container {
+      min-height: calc(775px * .5);
+      position: relative;
+      bottom: calc(-775px * .1);
+      max-width: $maxwidth;
+      width: $minwidth;
+
+      @media (max-width: 1100px) {
+        position: static;
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      min-height: auto;
+      padding-bottom: 40px!important;
+    }
+
+
+    p {
+      color: white!important;
+    }
+
+    .hero_left_inner {
+      margin: auto auto auto 0;
+      position: relative;
+      top: calc(775px * .125);
+      width: calc(100% * .60);
+      z-index: 999;
+      padding: 0 5% 0 0;
+
+      @media (max-width: 1100px) {
+        width: 100%;
+        top: 0;
+        margin: 0 auto;
+        position: static;
+        text-align: center;
+        padding: 0;
+        float: none;
+      }
+      
+      .x-container {
+        max-width:626px;
+        margin: 0 auto 0 0;
+
+        @media (max-width: 1100px) {
+          max-width: 94%;
+          margin: 0 auto;
+        }
+      }
+
+      h1 {
+        margin: 0 auto 15px auto!important;
+        font-size: 2.6rem!important;
+        color: white!important;
+        line-height: 3rem;
+
+        @include breakpoint(xlarge) {
+          font-size: 1.8rem!important;
+          margin: 0 auto 15px auto!important;
+        }
+
+         @include breakpoint(small) {
+          line-height: 2.2rem!important;
+         }
+      }
+
+      p {
+        font-size: 1.2rem!important;
+        line-height: 1.6rem;
+      }
+    }
+
+    .img_col {
+      width: calc(100% * .40);
+      background-color: white!important;
+      padding: 30px 30px 0 30px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: $box1;
+
+      @include breakpoint(xlarge) {
+        width: calc(100% * .70);
+        margin: 0 auto!important;
+        display: block;
+        float: none;
+        padding-bottom: 15px;
+      }
+
+      @include breakpoint(small) {
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="tel"] {
+        padding: 20px 5px!important;
+        font-size: 18px;
+        text-indent: 15px;
+      }
+
+      input[type="submit"] {
+        font-size: 1.4rem!important;
+        text-transform: uppercase!important;
+
+      }
+
+      .wpcf7-recaptcha>div,
+      .wpcf7-recaptcha .rc-anchor-normal {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .home_row_2_header {
+    height: 200px;
+    width: 100%;
+    background-color: $red!important;
+    position: absolute;
+    z-index: 0;
+    display: none;
+    &:after {
+        content:"";
+        z-index: 2;
+        background: transparent;
+        width: 100%!important;
+        height: 100%!important;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        opacity: .6;
+    }
+  }
+
+  .home_row_2 {
+    position: relative;
+    width: 100%!important;
+    // top: calc(-775px * .22);
+    margin-top: calc(-775px * .225);
+    margin-bottom: 0!important;
+    padding-bottom: 40px!important;
+    display: flex;
+    height: auto;
+
+    @include breakpoint(xlarge) {
+      margin-top: 40px;
+    }
+
+    .x-column {
+      background-color: white;
+    }
+
+    >.x-container {
+      max-width: $maxwidth;
+      width: $minwidth;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+
+      @include breakpoint(medium) {
+        flex-direction: column;
+      }
+    }
+
+    .description_card {
+      transition: all .3s ease-in-out;
+      h2 {
+        margin-bottom: 15px;
+        margin-top: 30px;
+        border-bottom: $dotHeadline;
+        opacity: .75;
+        width: 75%;
+        transition: all .3s ease-in-out;
+      }
+
+      img {
+        margin-bottom: 15px!important;
+      }
+
+      &:hover {
+        margin-top: -30px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        border: 2px solid $lightgrey;
+        border-top: 10px solid $lightgrey;
+        box-shadow: none;
+
+        img {
+          margin-top: -10px!important;
+          transform: scale(1.2);
+        }
+
+        h2 {
+          opacity: 1;
+          color: $blue!important;
+          width: 100%;
+        }
+      }
+    }
+
+    .home-description-card {
+      p.click-more {
+        // display: none;
+        text-align: center;
+        letter-spacing: -1px;
+        background-color: $red;
+        padding: 0!important;
+        color: $red!important;
+        margin: 0 auto!important;
+        font-size: 1.25rem!important;
+        font-weight: bold!important;
+        height: 0;
+      }
+    }
+  }
+
+  .row_3 {
+    background-size: 90% 100%;
+    // background-color: lighten($lightgrey, 2%)!important;
+    // background-color: lighten($blue, 40%)!important;
+    background-color: transparent!important;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 999;
+    background-position: left top;
+    margin-top: 0;
+    padding: 40px 0!important;
+
+    // &:after {
+    //   content:'';
+    //   display: block;
+    //   background: $blue;  /* fallback for old browsers */
+    //   background: -webkit-linear-gradient(to top, $blue, $grey);  /* Chrome 10-25, Safari 5.1-6 */
+    //   background: linear-gradient(to top, $blue, $grey); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   opacity: .2;
+    //   z-index: -1;
+    // }
+    
+    @include breakpoint(xlarge) {
+      margin-top: 20px;
+    }
+
+    @include breakpoint(large) {
+      background-size: 130% 100%;
+      padding: 40px 2%!important;
+    }
+    
+    #x-content-band-6 {
+      margin: 0 auto;
+      >.x-container {
+        max-width: $maxwidth * .8;
+      }
+    }
+    .col_25 {
+      width: 35%!important;
+      margin: 0 auto 0 0;
+      position: relative;
+      z-index: 9997;
+
+       @include breakpoint(medium) {
+        width: 100%!important;
+        margin: 0 auto!important;
+       }
+    }
+
+    .col_75 {
+      width: 50%!important;
+
+
+      img {
+        height: 520px;
+        opacity: .94;
+        position: absolute;
+        z-index: 3;
+        right: 20px;
+        bottom: 3px;
+
+        @include breakpoint(xlarge) {
+          height: 490px;
+
+        }
+        @include breakpoint(large) {
+          height: 445px;
+        }
+
+        @include breakpoint(medium) {
+          display: none;
+
+        }
+      }
+    }
+
+    .row_3_col_1_inner {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      border: 1px solid $lightgrey;
+      box-shadow: $box1;
+      margin: 0 auto 0 0;
+      display:block;
+      border-radius: 6px;
+      width: 100%;
+
+      @include breakpoint(xlarge) {
+       padding: 20px
+      }
+
+       @include breakpoint(small) {
+        margin: 0 auto;
+       }
+
+      h3 {
+        color: $blue!important;
+        margin: 0 auto 15px auto;
+        font-size: 1.6rem!important;
+        span {
+          font-family: "Proxima-Nova", sans-serif!important;
+        }
+      }
+
+      p {
+        padding: 0;
+        @include breakpoint(large) {
+          padding: 5px 20px 0 20px;
+        }
+      }
+
+      .x-btn {
+        width: 80%;
+      }
+    }
+  }
+
+  .row_4 {
+    max-width: $maxwidth * .8;
+    margin: 0 auto;
+
+    @include breakpoint(large) {
+      padding:0 2%!important;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.6rem!important;
+
+      .fb {
+        color: $blue;
+        font-family: "Proxima-Nova", sans-serif!important;
+      }
+
+      .fr {
+        color: $red;
+        font-family: "Proxima-Nova", sans-serif!important;
+      }
+
+      .fg {
+        color: $medgrey;
+        font-family: "Proxima-Nova", sans-serif!important;
+      }
+    }
+
+    .row_4_text {
+      p {
+        margin: 0 auto 20px 0;
+      }
+
+      @include breakpoint(medium) {
+        margin-bottom: 2%!important;
+
+        p {
+          margin: 0 auto 15px auto!important;
+          padding: 0 2%;
+        }
+      }
+    }
+  }
+
+  .row_5 {
+    position: relative;
+    z-index: 10;
+    max-width: $maxwidth;
+    width: 98%!important;
+    margin: 40px auto;
+
+    @include breakpoint(medium) {
+      margin-top: 10px;
+    }
+    >.x-container {
+      display: flex;
+      @include breakpoint(medium) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .row_6 {
+    text-align: center;
+    background-color: $blue!important;
+    position: relative;
+    top: -100px;
+    z-index: 0;
+    padding: 90px 20px 40px 20px!important;
+        &:after {
+        content:"";
+        z-index: 4;
+        background: $blue;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, $blue, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, $blue, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        width: 100%!important;
+        height: 100%!important;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        opacity: .6;
+      }
+
+    h4 {
+      font-size: 2.3rem!important;
+      color: white!important;
+      margin: 30px auto 20px auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    .x-btn {
+      z-index: 5;
+    }
+  }
+}

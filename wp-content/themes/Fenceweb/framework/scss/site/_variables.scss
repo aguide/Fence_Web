@@ -1,0 +1,39 @@
+$grey: #353535;
+$red: #be374a;
+$blue: #3295ab;
+$medgrey: #bcbcbc;
+$lightgrey: #e5e5e5;
+
+//---------MISC
+$box1: 0px 2px 0px rgba(0,0,0,0.25);
+$box2: 0px 10px 13px -5px rgba(0,0,0,0.2);
+$maxwidth: 1286px;
+$minwidth: 96%;
+$dotHeadline: 2px dotted $lightgrey;
+$bounceInOut: all 0.3s cubic-bezier(0.3, 0.7, 0.1, 1.5);
+
+//---------breakpoints
+
+$mini: 375px;
+$small: 480px;
+$medium: 767px;
+$large: 979px;
+$xlarge: 1100px;
+
+@mixin breakpoint($point) {
+  @if $point == mini {
+    @media screen and (max-width:$mini) { @content ; }
+  }
+  @else if $point == small {
+    @media screen and (max-width:$small) { @content ; }
+  }
+  @else if $point == medium {
+    @media screen and (max-width:$medium) { @content ; }
+  }
+  @else if $point == large {
+    @media screen and (max-width:$large) { @content ; }
+  }
+  @else if $point == xlarge {
+    @media screen and (max-width:$xlarge) { @content ; }
+  }
+}

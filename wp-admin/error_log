@@ -1,0 +1,2 @@
+[05-Jun-2017 01:57:15 UTC] PHP Fatal error:  Class 'X_Update_API' not found in /home/aguidetta/public_html/fenceweb_0424/wp-content/themes/x/framework/functions/global/admin/addons/updates/class-plugin-updater.php on line 205
+[05-Jun-2017 01:58:00 UTC] PHP Fatal error:  Class 'X_Update_API' not found in /home/aguidetta/public_html/fenceweb_0424/wp-content/themes/x/framework/functions/global/admin/addons/updates/class-plugin-updater.php on line 205

@@ -1,0 +1,134 @@
+.x-colophon.top {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  background-color: white!important;
+  .x-container.max.width {
+    width: 94%;
+    max-width: 1800px;
+
+    .x-column {
+      width: 19%;
+      @include breakpoint(large) {
+        width: 100%!important;
+        border: 1px solid $lightgrey;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+
+        &:last-of-type {
+          border: none;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+      &:first-of-type {
+        width: 31%;
+        border: none;
+        img {
+          width: 65%;
+        }
+      }
+    }
+
+    .h-widget {
+      font-size: 1.6rem!important;
+    }
+
+    #text-2 {
+      padding-right: 40px;
+      img {
+        margin: 0 auto 5px auto;
+        width: 215px;
+      }
+
+      h4 {
+        font-size: 1.1rem!important;
+        font-weight: 300!important;
+        color: $red!important;
+        margin: 0 auto 5px auto;
+      }
+
+      @include breakpoint(large){
+        padding-right: 0px;
+      }
+    }
+
+    .widget.widget_nav_menu {
+      ul {
+        border: none;
+        box-shadow: none;
+        margin-top: 30px!important;
+        li {
+          vertical-align: middle;
+          margin-bottom: 10px;
+          a {
+            transition: all .4s ease-in-out;
+            border: none;
+            padding: 0;
+            vertical-align: middle;
+
+            &::before {
+              display: none;
+            }
+
+            &:hover {
+              margin-left: 10px;
+            }
+          }
+          &:hover {
+            border-left: 2px dotted $red;
+          }
+        }
+      }
+    }
+  }
+
+  #nav_menu-2,
+  #nav_menu-3 {
+    ul {
+      margin-top: 15px!important;
+    }
+    .h-widget {
+      margin-bottom: 10px!important;
+    }
+  }
+}
+
+#wpcf7-f49-o2 {
+  text-align: center;
+  background-color: $lightgrey;
+  padding: 20px 20px 2px 20px;
+  border-radius: 6px;
+
+  form {
+    margin-bottom: 0;
+  }
+
+  input[type=text],
+  textarea {
+    border: 0;
+    border-radius: 6px;
+  }
+
+  input[type=submit] {
+    box-shadow: none!important;
+  }
+}
+
+.x-colophon.bottom {
+  margin: 30px auto 0 auto;
+  padding: 10px 0;
+  background-color: $grey;
+  border-top: 3px dashed white;
+  box-shadow: none;
+  .x-colophon-content {
+    margin: 0 auto;
+    padding: 0;
+    p {
+      color: white!important;
+      font-weight: 900!important;
+      margin: 0 auto;
+    }
+  }
+}

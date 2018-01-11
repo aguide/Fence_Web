@@ -1,0 +1,469 @@
+.landing {
+  .x-main {
+    margin-top: 0!important;
+  }
+  .content {
+    background-color: white!important;
+  }
+  .header_wrap {
+    background: linear-gradient(180deg,#00b6df,$blue 50%)!important;
+    position: relative;
+      &::before {
+        content:"";
+        position: absolute;
+        height: 100px;
+        width: 50px;
+        background-image: url('/wp-content/uploads/2017/03/arrow.svg');
+        bottom: -75px;
+        display: block;
+        background-repeat: no-repeat!important;
+        background-size: cover;
+        z-index: 10000;
+        transform:rotate(90deg);
+        left: 48.5%;
+
+        @include breakpoint(medium) {
+          left: 45.5%;
+        }
+
+        @include breakpoint(small) {
+          left: 43.5%;
+        }
+      }
+
+      &:after {
+        content:"";
+        z-index: 4;
+        background: linear-gradient(to top,$grey,transparent);
+        width: 100%!important;
+        height: 100%!important;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        opacity: .6;
+      }
+    .header-top-bar {
+      position: relative;
+      z-index: 5;
+      width: 85%;
+      margin: 40px auto 100px auto;
+
+      @media (max-width: 610px) {
+        margin: 20px auto 20px auto;
+      }
+
+      .x-column {
+        width: 48%!important;
+        float: left;
+        @include breakpoint(medium) {
+          width: 50%!important;
+          float: left;
+        }
+
+        @media (max-width: 610px) {
+          width: 100%!important;
+          text-align: center;
+        }
+      }
+
+      img {
+        width: 250px;
+        display: inline-block;
+        margin-left: 0;
+
+        @media (max-width: 610px) {
+          border-bottom: 1px dashed white;
+          padding-bottom: 10px;
+        }
+      }
+      .topbar-text {
+        p, a {
+          color: white!important;
+          font-size: 2.2rem!important;
+          font-weight: 900!important;
+          text-align: right;
+          text-shadow: 0px 3px 4px rgba($grey, 0.6)!important;
+          margin-bottom: 0;
+          padding: 14px 0 10px 0;
+          vertical-align: bottom!important;
+          font-family: "Proxima Nova", sans-serif!important;
+
+          @include breakpoint(medium) {
+            font-size: 2rem!important;
+          }
+
+           @media (max-width: 610px) {
+            text-align: center;
+           }
+        }
+      }
+    }
+
+    .header-main {
+      margin: 0 auto;
+      width: 85%;
+      max-width: 900px;
+      position: relative;
+      z-index: 5;
+      padding-bottom: 40px!important;
+
+      @include breakpoint(small) {
+        width: 95%;
+      }
+      .landing_form_col {
+        width:100%!important;
+        max-width: 900px!important;
+        margin: 0 auto;
+        display: block;
+        padding: 30px 30px 2px 30px;
+        background-color: white!important;
+        border-radius: 2px;
+        // border-left: 8px solid $medgrey;
+        //  border-right: 8px solid $medgrey;
+        // border-bottom: 8px solid rgba($grey, .8);
+        // border-top: 8px solid darken(white, 10%);
+        // -webkit-box-shadow: -7px 6px 3px 1px rgba(0,0,0,0.1);
+        // -moz-box-shadow: -7px 6px 3px 1px rgba(0,0,0,0.1);
+        // box-shadow: -7px 6px 3px 1px rgba(0,0,0,0.1);
+
+        -webkit-box-shadow: 0px 10px 42px 5px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 10px 42px 5px rgba(0,0,0,0.4);
+        box-shadow: 0px 10px 42px 5px rgba(0,0,0,0.4);
+
+        // -webkit-box-shadow: 0px 3px 6px 0px rgba($grey, 0.75)!important;
+        // -moz-box-shadow:    0px 3px 6px 0px rgba($grey, 0.75)!important;
+        // box-shadow:         0px 3px 6px 0px rgba($grey, 0.75)!important;
+
+        @include breakpoint (medium) {
+          padding-top: 20px;
+        }
+
+        h1 {
+          text-align: center;
+          margin: 0 auto 2% auto;
+          @include breakpoint (medium) {
+            margin-bottom: 6%;
+          }
+        }
+        #wpcf7-f145-p15-o1 {
+          text-align: center;
+          input, textarea {
+            font-size: .9rem;
+            border-radius: 6px;  
+            border: none;
+            background-color: $lightgrey;
+            box-shadow: none;
+            padding: 15px 0 15px 15px;
+          }
+
+          input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+            background-color: $lightgrey!important;
+          }
+          input[type='submit'] {
+            margin: 0 auto;
+            padding: 15px;
+            width: auto;
+            font-size: 1.2rem!important;
+            border: none;
+            -webkit-box-shadow: 0px 3px 6px 0px rgba($grey, 0.4)!important;
+            -moz-box-shadow:    0px 3px 6px 0px rgba($grey, 0.4)!important;
+            box-shadow:         0px 3px 6px 0px rgba($grey, 0.4)!important;
+
+            @include breakpoint(medium) {
+              width: 100%;
+            }
+          }
+
+          .wpcf7-response-output {
+            border: 1px dashed $medgrey;
+            color: $grey!important;
+            font-weight: 900;
+            text-align: center;
+          }
+
+          .wpcf7-not-valid-tip {
+            font-weight: 900;
+            color: $red;
+          }
+
+          .wpcf7-recaptcha>div,
+          .wpcf7-recaptcha .rc-anchor-normal {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .landing_text_col {
+        width: 60%;
+        padding-left: 5%;
+
+        h1 {
+          text-align: right;
+          text-shadow: 0px 3px 4px rgba($grey, 0.6)!important;
+          color: white!important;
+        }
+
+        p {
+          margin-left: 35%;
+          margin-top: 15px;
+          color: #d5d5d5!important;
+          margin-bottom: 40px!important;
+          position: relative;
+
+          &:after {
+            content:'';
+            position: absolute;
+            background-image: url('/wp-content/uploads/2017/04/landing_annotation.svg');
+            height: 48px;
+            width: 700px;
+            left: -299px;
+            bottom: -13px;
+            background-repeat: no-repeat;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .landing-row-1 {
+    width: 71%;
+    margin: 0 auto;
+
+    @include breakpoint(medium) {
+      width: 96%;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 46px auto 35px auto;
+      border-bottom: 1px dashed $medgrey;
+      width: 85%;
+      padding-bottom: 5px;
+    }
+    .landing_card.x-column {
+      background-color: white!important;
+      text-align: center;
+      z-index: 1;
+      padding: 30px;
+      border-radius: 2px;
+      -webkit-box-shadow: 0px 5px 13px 0px rgba($medgrey,0.6) !important;
+      -moz-box-shadow:    0px 5px 13px 0px rgba($medgrey,0.6) !important;
+      box-shadow:         0px 5px 13px 0px rgba($medgrey,0.6) !important;
+      border: 1px solid $lightgrey;
+      position: relative;
+
+      @media (max-width:834px) {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 60px!important;
+        }
+      }
+
+
+      &::after {
+        content:"";
+        position: absolute;
+        height: 100px;
+        width: 50px;
+        background-image: url('/wp-content/uploads/2017/03/arrow.svg');
+        right: 44.5%;
+        bottom: -75px;
+        display: block;
+        background-repeat: no-repeat!important;
+        background-size: cover;
+        z-index: 10000;
+        transform: rotate(90deg);
+      }
+
+      h3 {
+        border-bottom: 1px dashed $medgrey;
+      }
+
+      img {
+        width: 100%!important;
+        -webkit-box-shadow: 0px 4px 10px 2px rgba($medgrey,.5)  !important;
+        -moz-box-shadow:    0px 4px 10px 2px rgba($medgrey,.5)  !important;
+        box-shadow:         0px 4px 10px 2px rgba($medgrey,.5)  !important;
+        position: relative;
+
+        @media (max-width: 1067px) {
+          width: 100%!important;
+        }
+      }
+        .img-wrap {
+          width: 50%;
+
+          @media (max-width: 1067px) {
+            width: 80%;
+          }
+
+          @include breakpoint(medium) {
+            width: 60%;
+          }
+
+          &:before {
+          content:'';
+          background-image: url('/wp-content/uploads/2017/04/browser-header.svg');
+          position: absolute;
+          top: -1px;
+          height: 50px;
+          width: 100.24%;
+          z-index: 10000;
+          display: block;
+          background-repeat: no-repeat;
+
+          @media (max-width: 1067px) {
+            width: 101%;
+          }
+        }
+      }
+    }
+  }
+
+  .landing-row-2 {
+    width: 85%;
+    margin: 40px auto;
+    border: 1px solid $lightgrey;
+    padding: 60px!important;
+    position: relative;
+    -webkit-box-shadow: 0px 5px 13px 0px rgba($medgrey,0.6) !important;
+    -moz-box-shadow:    0px 5px 13px 0px rgba($medgrey,0.6) !important;
+    box-shadow:         0px 5px 13px 0px rgba($medgrey,0.6) !important;
+
+    @media (max-width: 1067px) {
+      padding-top: 30px!important;
+    }
+
+    @include breakpoint(small) {
+      padding: 30px 20px 20px 20px!important;
+    }
+
+    @include breakpoint(medium) {
+      width: 96%;
+    }
+
+  
+
+    .landing-row-2-text {
+      width: 65%;
+
+      @media (max-width: 1067px) {
+        width: 100%;
+        text-align: center;
+      }
+      h4 {
+        font-size: 2rem!important;
+        margin: 0 auto 20px auto;
+        border-bottom: 1px dashed $medgrey;
+      }
+      p {
+        padding-right: 20px;
+
+        @include breakpoint(small) {
+          padding: 0;
+        }
+      }
+    }  
+
+    .landing-row-2-img {
+      height: 100%;
+      width: 30%;
+      position: relative;
+
+      @media (max-width: 1067px) {
+        width: 100%;
+        margin: 40px auto 0 auto;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+        margin: 20px auto 0 auto!important;
+        transition: all 2s ease-in-out;
+
+        @media (max-width: 1067px) {
+          width: 50%;
+          display: block;
+        }
+
+        @include breakpoint(small) {
+          width: 90%;
+        }
+
+        // &:hover {
+        //   transform:rotate(360deg);
+        // }
+
+      }
+    }
+  }
+
+  .landing-row-3 {
+    text-align: center;
+    background-color: $red!important;
+    padding: 20px 0 40px 0!important;
+    margin: 40px auto 0 auto!important;
+    position: relative;
+
+      &:after {
+        content:"";
+        z-index: 0;
+        background: linear-gradient(to top,$grey,transparent);
+        width: 100%!important;
+        height: 100%!important;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        opacity: .6;
+      }
+
+    .x-btn {
+      background-color: $grey!important;
+      text-shadow: 0px 3px 4px rgba($grey, 0.6)!important;
+      -webkit-box-shadow: 0px 5px 13px 0px rgba($grey,.8) !important;
+      -moz-box-shadow:    0px 5px 13px 0px rgba($grey,.8) !important;
+      box-shadow:         0px 5px 13px 0px rgba($grey,.8) !important;
+      position: relative;
+      z-index: 20;
+
+      &:hover {
+        background-color: $blue!important;
+      }
+    }
+
+    h5 {
+      color: white!important;
+      margin: 0 auto 30px auto;
+      font-size: 2rem!important;
+      text-shadow: 0px 3px 4px rgba($grey, 0.6)!important;
+      position: relative;
+      z-index: 20;
+      border-bottom: 1px dashed white;
+      width: 85%;
+      padding-bottom: 10px;
+    }
+  }
+
+  .landing-footer {
+    margin: 0 auto;
+    text-align: center;
+    background-color: $grey!important;
+    p {
+      color: white!important;
+      padding: 4px 0;
+      font-weight: 900!important;
+      margin: 0 auto;
+      text-shadow: 0px 3px 4px rgba($grey, 0.6)!important;
+    }
+  }
+
+  .x-scroll-top {
+    display: none;
+  }
+}

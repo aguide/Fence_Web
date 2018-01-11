@@ -1,0 +1,420 @@
+body {
+  font-size: 16px!important;
+  font-weight: 300!important;
+  color: $medgrey;
+  background-color: white!important;
+}
+
+.x-main,
+.right {
+  margin-top: 90px!important;
+}
+
+.page-template-template-layout-portfolio {
+  margin-top: 90px!important;
+  .x-main {
+    margin-top: 20px!important;
+  }
+}
+
+.single-x-portfolio {
+  .x-main {
+    margin-top: 45!important;
+  }
+}
+
+.content {
+  background-color: white!important;
+}
+
+.x-img {
+  margin: 0 auto!important;
+}
+.x-btn, input[type="submit"],.x-portfolio-filters {
+  border-radius: 6px!important;
+  background-color: $red!important;
+  text-align: center;
+  color: white!important;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 900!important;
+  letter-spacing: 0!important;
+  font-size: 1.2rem!important;
+  -webkit-box-shadow: 7px 7px 6px 0px rgba($grey, .10)!important;
+  -moz-box-shadow: 7px 7px 6px 0px rgba($grey, .10)!important;
+  box-shadow: 7px 7px 6px 0px rgba($grey, .10)!important;
+  transition: all .9s ease;
+  text-shadow: 3px 3px darken($red, 15%)!important;
+
+  &:hover {
+    border: none;
+    background-color: $grey!important;
+    padding: 10px 20px;
+    box-shadow: none!important;
+    text-shadow: 3px 3px darken($grey, 15%)!important;
+  }
+}
+
+//-------Content Bands
+.x-content-band-94 {
+  width: 100%!important;
+  >.x-container {
+    max-width: $maxwidth;
+    min-width: $minwidth;
+  }
+}
+
+//-------Navbar_current_item_fix
+.x-navbar .desktop .x-nav > li > a:hover, .x-navbar .desktop .x-nav > .x-active > a, .x-navbar .desktop .x-nav > .current-menu-item > a {
+  box-shadow: inset 0 4px 0 0 $red!important;
+}
+
+//-------Cards
+.description_card {
+  padding: 40px;
+  border-radius: 6px;
+  position: relative;
+  border: 1px solid $lightgrey;
+  margin-right: 2%!important;
+  width: 32%!important;
+  box-shadow: $box1;
+  @include breakpoint(medium) {
+    width: 100%!important;
+    margin-bottom: 2%;
+  }
+  &:last-of-type {
+    margin-right: 0!important;
+  }
+
+  @include breakpoint(xlarge) {
+    padding: 30px!important;
+  }
+
+
+
+  h2 {
+    margin: 20px auto 10px auto;
+    z-index: 9;
+    position: relative;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+
+    @include breakpoint(medium) {
+      text-align: center;
+    }
+  }
+  img {
+    height: 190px!important;
+    display: block;
+    margin: 0 auto;
+    transition: $bounceInOut;
+    @include breakpoint(large) {
+      height: 200px!important;
+    }
+  }
+
+  .x-btn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent!important;
+    border-radius: 0;
+    border: none;
+    box-shadow: none!important;
+    z-index: 10;
+  }
+
+  &:hover {
+    img {
+      transform: scale(.9);
+    }
+  }
+}
+
+.row_4_card {
+  box-shadow: $box1;
+  margin: 0 0 20px auto;
+  padding: 10px 10px 0 20px;
+  border: 1px solid $lightgrey;
+  border-radius: 0 6px 6px 6px;
+  width: 100%!important;
+
+  @include breakpoint(medium) {
+    width: 96%!important;
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+  h4 {
+    margin: 0 auto 5px 0;
+    border-bottom: $dotHeadline;
+    width: 80%;
+
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+  }
+}
+
+.cb {
+  &::before {
+    border-top: 4px solid darken($blue, 15%);
+    border-bottom: 4px solid darken($blue, 15%);
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    height: calc(40% + 4px);
+    width: 20px;
+    background-color: $blue!important;
+    z-index: 9995;
+    display: block;
+    -webkit-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    -moz-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    border-radius: 6px;
+  }
+}
+
+.cr {
+  &::before {
+    border-top: 4px solid darken($red, 15%);
+    border-bottom: 4px solid darken($red, 15%);
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    height: calc(40% + 4px);
+    width: 20px;
+    background-color: $red!important;
+    z-index: 9995;
+    display: block;
+    -webkit-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    -moz-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    border-radius: 6px;
+  }
+}
+
+.cg {
+  &::before {
+    border-top: 4px solid darken($medgrey, 15%);
+    border-bottom: 4px solid darken($medgrey, 15%);
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    height: calc(40% + 4px);
+    width: 20px;
+    background-color: $medgrey!important;
+    z-index: 9995;
+    display: block;
+    -webkit-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    -moz-box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    box-shadow: 2px 8px 2px -2px rgba(229,229,229,1);
+    border-radius: 6px;
+  }
+}
+
+
+.arrow_card {
+
+  box-shadow: $box1;
+  background-color: white!important;
+  padding: 40px;
+  width: 32.6666666667%!important;
+  margin-right: 1%;
+  border-radius: 6px;
+  border: 1px solid $lightgrey;
+  position: relative;
+  z-index: -1;
+
+  @media (max-width:917px) {
+    width: 100%!important;
+    margin: 0 auto 5% auto;
+  }
+
+  @include breakpoint(medium) {
+    margin-bottom: 4%;
+  }
+
+  @include breakpoint(small) {
+    margin-bottom: 10%;
+  }
+  
+  &:before {
+    content:'';
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Proxima-Nova', sans-serif!important;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: $red;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, $red, #6b202b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, $red, #6b202b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 5px solid white;
+    border-radius: 50%;
+    z-index: 5;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &:nth-child(1) {
+    &:before {
+      content:'1';
+    }
+  }
+    &:nth-child(2) {
+    &:before {
+      content:'2';
+    }
+  }
+    &:nth-child(3) {
+    &:before {
+      content:'3';
+    }
+  }
+
+  // &:before {
+  //   content:"";
+  //   position: absolute;
+  //   height: 100px;
+  //   width: 50px;
+  //   background-image: url('/wp-content/uploads/2017/03/arrow.svg');
+  //   right: -28%;
+  //   top: 35%;
+  //   display: block;
+  //   background-repeat: no-repeat!important;
+  //   background-size: cover;
+  //   z-index: 999;
+
+  //   @media (max-width:1088px) {
+  //     right: -41px;
+  //     width: 40px;
+  //     height: 80px;
+  //   }
+
+  //   @media (max-width:917px) {
+  //     bottom: -60px!important;
+  //     right: 46%;
+  //     top: initial;
+  //     transform: rotate(90deg);
+  //   }
+  // }
+
+  h5 {
+    margin: 0 auto 20px auto;
+    color: $red!important;
+    font-size: 2.2rem!important;
+    border-bottom: 1px dotted $grey;
+    position: relative;
+    z-index: 6;
+    @media (max-width:1088px) {
+      font-size: 2rem!important;
+    }
+
+    @media (max-width:917px) {
+      text-align: center;
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    h5 {
+      line-height: 2.2rem;
+    }
+  }
+}
+
+.arrow_card_last {
+  margin-right: 0;
+}
+
+//---------Forms
+//---footer form
+#wpcf7-f49-o1 {
+  background-color: lightgrey!important;
+  padding: 20px 20px 0 20px;
+  border-radius: 2px;
+  input[type="text"], textarea {
+    border: none;
+  }
+
+  input[type="submit"] {
+    position: relative;
+    bottom: -5px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 40px;
+  }
+
+  p {
+    &:last-of-type {
+      height: 30px;
+    }
+  }
+}
+
+//----Questionnaire Pages
+.questionnaire {
+  .x-main.full {
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      padding-bottom: 10px;
+      width: 80%;
+      margin: 20px auto 20px auto;
+      text-shadow: 2px 4px $lightgrey;
+    }
+
+    .wpcf7 {
+      border: 1px solid $lightgrey;
+      border-radius: 8px;
+      padding: 30px;
+
+      p {
+        font-weight: 900!important;
+        color: $grey!important;
+        font-size: 1.1rem!important;
+      }
+
+      textarea, input[type=text] {
+        border-radius: 12px;
+        border: none;
+        background-color: $lightgrey;
+        font-size: 1rem!important;
+        margin-bottom: 20px;
+      }
+
+      input[type=submit] {
+        border-radius: 20px!important;
+        display: block;
+        margin: 20px auto 0 auto;
+        font-size: 1.5rem!important;
+      }
+    }
+  }
+}
+
+.x-scroll-top.in {
+  background-color: $red;
+  opacity: 1;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+
+  i {
+    color: white;
+  }
+}
